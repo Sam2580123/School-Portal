@@ -20,7 +20,7 @@ eks_node_groups = {
     desired_size   = 3
     max_size       = 8
     min_size       = 2
-    instance_types = ["t3.large"]
+    instance_types = ["t3.small"]
     capacity_type  = "ON_DEMAND"
   }
 }
@@ -30,7 +30,7 @@ eks_node_groups = {
 rds_instance_type     = "db.t3.micro"
 rds_allocated_storage = 20
 rds_dbname            = "portaldb"
-rds_username          = "admin"
+rds_username          = "portal"
 rds_password          = "database123"  # Replace with a secure password
 rds_port              = 5432
 
