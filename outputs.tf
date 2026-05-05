@@ -62,13 +62,35 @@ output "route53_nameservers" {
 
 
 # ECR
-output "bankfrontend_ecr_url" {
-  value = aws_ecr_repository.bank_frontend.repository_url
+output "portalfrontend_ecr_url" {
+  value = aws_ecr_repository.portal_frontend.repository_url
 }
 
-output "bankbackendapi_ecr_url" {
-  value = aws_ecr_repository.bank_backend_api.repository_url
+output "authenticationservice_ecr_url" {
+  value = aws_ecr_repository.authentication_service.repository_url
 }
+
+
+output "paymentservice_ecr_url" {
+  value = aws_ecr_repository.payment_service.repository_url
+}
+
+output "biodataservice_ecr_url" {
+  value = aws_ecr_repository.biodata_service.repository_url
+}
+
+output "courseregservice_ecr_url" {
+  value = aws_ecr_repository.course_reg_service.repository_url
+}
+
+output "resultservice_ecr_url" {
+  value = aws_ecr_repository.result_service.repository_url
+}
+
+output "notificationservice_ecr_url" {
+  value = aws_ecr_repository.notification_service.repository_url
+}
+
 
 #Check whether cluster-issuer is ready
 
