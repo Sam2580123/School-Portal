@@ -97,8 +97,8 @@ output "notificationservice_ecr_url" {
 
 
 #R53 Records
-output "portal_subdomain_full_record" {
-  value       = aws_route53_record.portal
-  description = "Full Route53 record object for 'portal' subdomain"
-}
+# output "portal_subdomain_full_record" {
+#   value       = aws_route53_record.portal
+#   description = "Full Route53 record object for 'portal' subdomain"
+# }
 
