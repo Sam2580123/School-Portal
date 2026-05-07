@@ -68,10 +68,8 @@ Notification service - notification
 ---
 
 ## Repository Links
-
-- **Frontend application:** [Bank-app-Frontend](https://github.com/sam-osung/Bank-app-Frontend)  
-- **Backend application:** [Bank-app-Backend](https://github.com/sam-osung/Bank-app-Backend)  
-- **Kubernetes manifests:** [Banking-app-with-K8s](https://github.com/sam-osung/banking-app-with-k8s)
+ 
+- **School-portal Kubernetes manifests:** [app-manifests](https://github.com/Sam2580123/school-portal-application-manifest.git)
 
 ---
 
@@ -81,7 +79,7 @@ Notification service - notification
 2. **Helm deploys** NGINX Ingress, Cert-Manager, and ArgoCD.
 3. **ClusterIssuer** configures TLS certificates for subdomains automatically.
 4. **Route53 records** point the subdomains to the NGINX LoadBalancer.
-5. **Kubernetes manifests** (from your GitHub repo) deploy the backend and frontend apps on the EKS cluster, using RDS for persistent storage.
+5. **Kubernetes manifests** (from the GitHub repo) deploy the backend and frontend apps on the EKS cluster, using RDS for persistent storage.
 
 ---
 
