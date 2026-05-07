@@ -17,8 +17,8 @@ infra_subnets   = ["10.0.11.0/28", "10.0.12.0/28"]
 # EKS Node Group
 eks_node_groups = {
   worker_nodes = {
-    desired_size   = 5
-    max_size       = 10
+    desired_size   = 3
+    max_size       = 8
     min_size       = 2
     instance_types = ["t3.small"]
     capacity_type  = "ON_DEMAND"
