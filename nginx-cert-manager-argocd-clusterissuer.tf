@@ -64,6 +64,30 @@ resource "helm_release" "cert_manager" {
 }
 
 # -------------------------
+# Metrics Server via Helm
+# -------------------------
+resource "helm_release" "metrics_server" {
+  provider         = helm
+  name             = "metrics-server"
+  repository       = "https://kubernetes-sigs.github.io/metrics-server/"
+  chart            = "metrics-server"
+  version          = "3.14.0"
+  namespace        = "kube-system"
+  create_namespace = false
+
+  values = [<<EOT
+defaultArgs:
+  - --cert-dir=/tmp
+  - --secure-port=4443
+  - --kubelet-insecure-tls
+  - --kubelet-preferred-address-types=InternalIP
+EOT
+  ]
+
+  depends_on = [module.eks]
+}
+
+# -------------------------
 # Kubeconfig for local-exec
 # -------------------------
 resource "local_file" "kubeconfig" {
