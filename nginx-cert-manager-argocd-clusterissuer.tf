@@ -80,7 +80,6 @@ resource "helm_release" "metrics_server" {
   values = [<<EOT
 defaultArgs:
   - --cert-dir=/tmp
-  - --secure-port=4443
   - --kubelet-insecure-tls
   - --kubelet-preferred-address-types=InternalIP
 EOT
