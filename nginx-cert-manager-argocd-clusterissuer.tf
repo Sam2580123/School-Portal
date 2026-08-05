@@ -74,6 +74,8 @@ resource "helm_release" "metrics_server" {
   version          = "3.13.0"
   namespace        = "kube-system"
   create_namespace = false
+  timeout           = 600
+  wait              = true
 
   values = [<<EOT
 defaultArgs:
