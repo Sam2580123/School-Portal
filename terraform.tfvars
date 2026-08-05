@@ -22,6 +22,7 @@ eks_node_groups = {
     min_size       = 4
     instance_types = ["t3.small"]
     capacity_type  = "ON_DEMAND"
+    ami_type       = "AL2023_x86_64_STANDARD"
   }
 }
 
