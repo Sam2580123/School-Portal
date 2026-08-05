@@ -17,12 +17,13 @@ infra_subnets   = ["10.0.11.0/28", "10.0.12.0/28"]
 # EKS Node Group
 eks_node_groups = {
   worker_nodes = {
-    desired_size   = 5
-    max_size       = 12
-    min_size       = 4
-    instance_types = ["t3.small"]
-    capacity_type  = "ON_DEMAND"
-    ami_type       = "AL2023_x86_64_STANDARD"
+    desired_size    = 5
+    max_size        = 12
+    min_size        = 4
+    instance_types  = ["t3.small"]
+    capacity_type   = "ON_DEMAND"
+    ami_type        = "AL2023_x86_64_STANDARD"
+    release_version = "1.30.14-20260714"
   }
 }
 
